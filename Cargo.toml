@@ -8,6 +8,13 @@ license = "MIT"
 
 [dependencies]
 anyhow = "1.0.93"
+thiserror = "2.0.3"
+tracing = "0.1.40"
+tracing-appender = "0.2.3"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+
+[dev-dependencies]
+tokio = { version = "1.41.1", features = ["rt", "rt-multi-thread", "macros"] }
+axum = { version = "0.7.9", features = ["http2", "query", "tracing"] }
 serde = { version = "1.0.215", features = ["derive"] }
 serde_json = "1.0.133"
-thiserror = "2.0.3"
